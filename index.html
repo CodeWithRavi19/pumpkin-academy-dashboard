@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>School Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <aside class="side-bar">
+      <h2>🎃 Pumkin Academy</h2>
+      <nav>
+        <ul>
+          <li><a href="#"><i class="material-icons">home</i>Home</a></li>
+          <li><a href="#"><i class="material-icons">admin_panel_settings</i>Admin</a></li>
+          <li><a href="#"><i class="material-icons">school</i>Students</a></li>
+          <li><a href="#"><i class="material-icons">person</i>Teachers</a></li>
+          <li><a href="#"><i class="material-icons">library_books</i>Library</a></li>
+          <li><a href="#"><i class="material-icons">account_circle</i>Account</a></li>
+          <li><a href="#"><i class="material-icons">meeting_room</i>Class</a></li>
+          <li><a href="#"><i class="material-icons">subject</i>Subject</a></li>
+          <li><a href="#"><i class="material-icons">schedule</i>Routine</a></li>
+          <li><a href="#"><i class="material-icons">event_available</i>Attendance</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <main class="main-content">
+    <header class="header">
+      <input type="search" id="search-bar" placeholder=" Search here 🔍">
+      <i class="material-icons icon-container">notifications_none</i> 
+      <i class="material-icons icon-container">chat_bubble_outline</i>
+      <div class="profile">👤 Ravi sir (Admin)</div>
+    </header>
+  </main>
+
+  <section class="stats">
+    <h3>Admin Dashboard</h3>
+    <div class="stats-card">
+      <div class="purple">
+        <i class="material-icons">school</i> Student
+        <div>15.00K</div>
+      </div>
+      <div class="blue">
+        <i class="material-icons">person</i> Teachers
+        <div>2.00K</div>
+      </div>
+      <div class="orange">
+        <i class="material-icons">family_restroom</i> Parents
+        <div>5.6K</div>
+      </div>
+      <div class="green">
+        <i class="material-icons">monetization_on</i> Earning
+        <div>19.3K</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="charts">
+    <div class="chart">
+      <h3>All Exam Results</h3>
+      <p style="color: gray;">Students & Teachers</p>
+      <canvas id="barChart"></canvas>
+    </div>
+    <div class="chart">
+      <h3>Students</h3>
+      <canvas id="pieChart"></canvas>
+    </div>
+  </section>
+  <section>
+    <div class="top-student">
+      <div class="rankers">
+        <h3> Star Students :</h3>
+        <table>
+          <tr>
+             <th><input type="checkbox"></th>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Marks</th>
+            <th>percent</th>
+            <th>Year</th>
+          </tr>
+          <tr>
+             <td><input type="checkbox"></td>
+            <td>Anushka</td>
+             <td>PRE43178</td>
+             <td>1185</td>
+             <td>98%</td>
+             <td>2014</td>
+          </tr>
+           <tr>
+             <td><input type="checkbox"></td>
+            <td>Ravi</td>
+             <td>PRE43171</td>
+             <td>1180</td>
+             <td>93%</td>
+             <td>2014</td>
+          </tr>
+           <tr>
+              <td><input type="checkbox"></td>
+            <td>Rakesh</td>
+             <td>PRE43174</td>
+             <td>1165</td>
+             <td>91%</td>
+             <td>2014</td>
+          </tr>
+           <tr>
+             <td><input type="checkbox"></td>
+            <td>Ajay</td>
+             <td>PRE43187</td>
+             <td>1175</td>
+             <td>92%</td>
+             <td>2014</td>
+          </tr>
+           <tr>
+             <td><input type="checkbox"></td>
+            <td>Gulshan</td>
+             <td>PRE43189</td>
+             <td>1170</td>
+             <td>89%</td>
+             <td>2014</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+      <section class="exam-results">
+  <h3>All Exam Results</h3>
+  <div class="exam-card">
+    <div class="exam-item">
+      <div class="icon teacher-icon">
+        <i class="material-icons">person</i>
+      </div>
+      <div class="exam-info">
+        <h4>New Teacher</h4>
+        <p>It is a long established readable</p>
+      </div>
+      <span class="exam-time">Just now</span>
+    </div>
+    <div class="exam-item">
+      <div class="icon fee-icon">
+        <i class="material-icons">payments</i>
+      </div>
+      <div class="exam-info">
+        <h4>Fees Structure</h4>
+        <p>It is a long established readable</p>
+      </div>
+      <span class="exam-time">Today</span>
+    </div>
+    <div class="exam-item">
+      <div class="icon course-icon">
+        <i class="material-icons">menu_book</i>
+      </div>
+      <div class="exam-info">
+        <h4>New Course</h4>
+        <p>It is a long established readable</p>
+      </div>
+      <span class="exam-time">24 Sep 2025</span>
+    </div>
+  </div>
+  <button class="view-all">View All</button>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>
