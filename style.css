@@ -1,0 +1,459 @@
+ 
+ *{
+   margin: 0;
+   box-sizing: border-box;
+   padding: 0;
+ }
+.container {
+  position: relative;
+  width: 40vw; 
+  height: 70vh;
+  display: flex;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px black;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: calc(40vw + 10px); /* 40vw (sidebar width) + 20px spacing */
+  display: flex;
+  gap: 30px;
+  border: 2px solid white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 2px 2px 4px black;
+}
+ .container h2{
+   font-size: 37px;
+   display: flex;
+   margin-left: 20px;
+   margin-right: 20px;
+   color: #800080;
+   font-weight: bolder;
+   font-family: "Cabin", sans-serif;
+ }
+   
+.side-bar {
+  width: 40vw;
+  height: 70vh;
+  background: linear-gradient(135deg, #6b46c1, #dcd6f7); 
+  padding: 20px;
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top:0;
+}
+
+.side-bar h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFC0CB;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.side-bar ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.side-bar ul li {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.side-bar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  transition: all 0.3s ease-in-out;
+}
+
+.side-bar ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.side-bar ul li a:hover {
+  color: #ffeb3b;
+}
+
+.side-bar ul li a .material-icons {
+  font-size: 24px;
+  margin-right: 12px;
+  color: white;
+}
+
+.side-bar ul li a:hover .material-icons {
+  color: #ffeb3b;
+}
+
+.side-bar .icon-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.side-bar .icon-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.side-bar .icon-container p {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.material-icons {
+  transform: scale(1.5);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+ .icon-container {
+   display: inline-block;
+  text-align: center;
+   transform: scale(1.3);
+ }
+ #search-bar{
+   background-color: #D8BFD8;
+   border-radius: 10px;
+   display: flex;
+   position:relative;
+ }
+ .stats-card {
+  width: 550px;
+  position: absolute;
+  right: 20px;
+  top: 150px;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.stats {
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.stats h3 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  margin-left: 100px;
+}
+
+.stats-card {
+  position: absolute;
+  top: 60px; /* Adjust as needed to place it below the stats h3 */
+  right: 20px;
+  width: 550px;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.stats-card > div {
+  flex: 1;
+  width: 500px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stats-card > div:hover {
+  transform: translateY(-5px);
+}
+
+.stats-card div div {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: black;
+}
+  
+
+/* Color Classes */
+.purple { background-color: #6b46c1; }
+.blue { background-color: #4299e1; }
+.orange { background-color: #ed8936; }
+.green { background-color: #48bb78; }
+  
+.charts{
+   width: 550px;
+  position: absolute;
+   right: 20px;
+   top: 800px;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+   #barChart,#pieChart{
+     margin-top: 20px;
+     width:500px;
+   }
+ .charts {
+    display: flex;
+    gap: 20px;
+}
+
+.chart {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+  .top-student{
+    width: 61vw;
+    height: 20vh;
+    margin-top: 300px;
+    margin-left: 390px;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .top-student h3{
+    margin-top: 40px;
+    text-align: center;
+  }
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   margin-left: 60px;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Table Headers */
+th {
+    background-color: #6B46C1; /* Purple */
+    color: white;
+    text-transform: uppercase;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Table Rows */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Even Row Styling */
+tr:nth-child(even) {
+    background-color: #F3E5F5; /* Light Purple */
+}
+
+/* Hover Effect */
+tr:hover {
+    background-color: #D8BFD8; /* Slightly Darker Purple */
+    transition: 0.3s;
+}
+
+/* Checkbox Styling */
+td input[type="checkbox"], th input[type="checkbox"] {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+.exam-results {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+
+.exam-results h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.exam-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.exam-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.exam-item:hover {
+  background: #f0f0f0;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.teacher-icon {
+  background: #cce5ff;
+  color: #007bff;
+}
+
+.fee-icon {
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+.course-icon {
+  background: #d4edda;
+  color: #28a745;
+}
+
+.exam-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.exam-info p {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+}
+
+.exam-time {
+  font-size: 12px;
+  color: gray;
+}
+
+.view-all {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  background: #f3e5f5;
+  color: #8e44ad;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-all:hover {
+  background: #e1bee7;
+}
+
+   .exam-results{
+     margin-left: 400px;
+     margin-top: 50px;
+     width:550px;
+   }
+
+@media (min-width: 1024px) {
+  .dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto auto; /* Auto row heights */
+    gap: 20px;
+    margin-left: 42vw; /* Adjust to avoid overlapping with sidebar */
+    margin-top: 20px;
+    width: calc(100vw - 42vw - 40px);
+  }
+
+  .stats-card {
+    width: 100%;
+    position: static; /* Remove absolute positioning */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .stats h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .charts {
+    position: static;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+  }
+
+  .chart {
+    width: 100%;
+  }
+
+  .top-student {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .exam-results {
+    margin-left: 0;
+    width: 100%;
+  }
+}
